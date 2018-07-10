@@ -3,7 +3,7 @@ package gobst
 type Node struct {
 	left  *Node
 	right *Node
-	value int
+	value float64
 	// Add whatever you want here
 	//...
 	//...
@@ -11,11 +11,11 @@ type Node struct {
 
 type Bst struct {
 	root *Node
-	size int
+	size float64
 }
 
 /* Get size of the tree */
-func (bst *Bst) Size() int {
+func (bst *Bst) Size() float64 {
 	return bst.size
 }
 

@@ -1,7 +1,7 @@
 package gobst
 
 /* Find the left most node under current tree */
-func minValue(n *Node) int {
+func minValue(n *Node) float64 {
 	if n.left == nil {
 		return n.value
 	}
@@ -24,7 +24,7 @@ func link(parent *Node, n *Node) {
 	}
 }
 
-func del(n *Node, parent *Node, v int) bool {
+func del(n *Node, parent *Node, v float64) bool {
 	switch {
 	case n.value == v:
 		if n.left != nil && n.right != nil {
@@ -47,7 +47,7 @@ func del(n *Node, parent *Node, v int) bool {
 	return false
 }
 
-func (bst *Bst) Delete(v int) bool {
+func (bst *Bst) Delete(v float64) bool {
 	if !bst.Exists(v) || bst.root == nil {
 		return false
 	}
