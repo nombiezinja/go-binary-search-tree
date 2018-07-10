@@ -1,7 +1,7 @@
-package main
+package gobst
 
 type Node struct {
-	left *Node
+	left  *Node
 	right *Node
 	value int
 	// Add whatever you want here
@@ -10,8 +10,8 @@ type Node struct {
 }
 
 type Bst struct {
-	root *Node;
-	size int;
+	root *Node
+	size int
 }
 
 /* Get size of the tree */
@@ -27,6 +27,6 @@ func (bst *Bst) Root() *Node {
 // Construtor
 func NewBst() *Bst {
 	bst := new(Bst)
-	bst.size = 0;
+	bst.size = 0
 	return bst
 }

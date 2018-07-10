@@ -6,14 +6,19 @@ Simple implementations of a binary search tree written in GoLang. For more infor
   <img src="https://github.com/m2omou/go-binary-search-tree/raw/master/bst.png" alt="Her" />
 </p>
 
+Forked from https://github.com/m2omou/go-binary-search-tree/ (thanks for the good work), changes made to allow importing as a package:
+* remove `main.go`
+* change package name `from` main to `gobst`
+
+
 
 ## Installation
 
 ```cmd
-$>go get github.com/m2omou/go-binary-search-tree
+$>go get github.com/nombiezinja/go-binary-search-tree
 ```
 ```go
-import "github.com/m2omou/go-binary-search-tree"
+import "github.com/nombiiezinja/go-binary-search-tree"
 ```
 
 ## Methods
@@ -38,31 +43,6 @@ import "github.com/m2omou/go-binary-search-tree"
 
 ### showPostOrder()
 > Print the tree post-order.
-
-## Usage
-
-```go
-  // Creating a binary search tree
-	test := NewBst()
-
-	// Inserting some data
-	test.Insert(4)
-	test.Insert(1)
-	test.Insert(22)
-	test.Insert(699)
-	test.Insert(88)
-
-	// Number of nodes in the tree
-	fmt.Println(test.Size())
-
-	// Removes the item from the tree. 
-	// Returns true if removed, false if not found.
-	test.Delete(4)
-
-	// Returns true if the key exists or return false
-	fmt.Println(test.Exists(4))
-	fmt.Println(test.Exists(1))
-```
 
 ### Tree traversal
 

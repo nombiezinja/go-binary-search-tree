@@ -1,10 +1,10 @@
-package main
+package gobst
 
-func search(root *Node, value int) (bool) {
-	if (root != nil) {
-		if (value == root.value) {
+func search(root *Node, value int) bool {
+	if root != nil {
+		if value == root.value {
 			return true
-		} else if (value > root.value) {
+		} else if value > root.value {
 			return search(root.right, value)
 		} else {
 			return search(root.left, value)

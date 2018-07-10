@@ -1,4 +1,4 @@
-package main
+package gobst
 
 /* Find the left most node under current tree */
 func minValue(n *Node) int {
@@ -24,7 +24,6 @@ func link(parent *Node, n *Node) {
 	}
 }
 
-
 func del(n *Node, parent *Node, v int) bool {
 	switch {
 	case n.value == v:
@@ -32,7 +31,8 @@ func del(n *Node, parent *Node, v int) bool {
 			n.value = minValue(n.right)
 			return del(n.right, n, n.value)
 		}
-		link(parent, n); return true
+		link(parent, n)
+		return true
 	case n.value > v:
 		if n.left == nil {
 			return false
